@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+.container {
+  width: 80vw;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.App {
+  margin: 0;
+  min-height: 100vh;
+}
+.App-dark {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(24, 24, 24);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.h1-dark {
+  color: white;
+}
+.toggler {
+  padding: 6px 15px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+}
+.toggler:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+.toggler-dark {
+  padding: 6px 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+.toggler-dark:hover {
+  background-color: white;
+  color: black;
+}
+.search-bar input {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 7px;
+  outline: none;
+}
+.note-area {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.add-note {
+  background-color: hsl(180, 70%, 50%);
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 300px;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-note input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0;
+  padding-bottom: 5px;
+  outline: none;
+  background: none;
+  font-size: 2em;
+  font-weight: bold;
+}
+.add-note textarea {
+  flex: 1;
+  max-width: 100%;
+  resize: none;
+  padding: 7px;
+  outline: none;
+  border: none;
+  background: none;
+}
+.add-note button {
+  background: none;
+  border: 1px solid black;
+  font-size: 14px;
+  color: white;
+  margin: auto;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: 0.4s;
+  background-color: hsla(180, 70%, 50%, 0.5);
+  cursor: pointer;
+}
+.add-note button:hover {
+  color: black;
+  background-color: hsl(180, 70%, 50%);
+}
+
+/*---------------------------------- Notes --------------------------------*/
+
+.note {
+  background-color: hsl(55, 68%, 67%);
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 300px;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.note h1 {
+  height: 48px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+.note p {
+  flex: 1;
+  max-width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+.note button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: white;
+  margin: auto;
+  padding: 4px 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.note button svg {
+  height: 20px;
+  width: 20px;
+  transition: 0.4s;
+}
+.note button:hover svg {
+  fill: red;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+  .add-note {
+    width: 100%;
+  }
+  .note {
+    width: 100%;
+  }
+}
